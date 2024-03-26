@@ -61,7 +61,7 @@ public class Principal {
 				System.out.print(", ");
 			z++;
 		}
-		
+		System.out.println("--------------------");
 		
 	}
 
