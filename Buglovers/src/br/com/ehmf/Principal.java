@@ -1,6 +1,9 @@
 package br.com.ehmf;
 
+import br.com.ehmf.model.Aluno;
 import br.com.ehmf.model.Carro;
+import br.com.ehmf.model.Funcionario;
+import br.com.ehmf.model.Pessoa;
 
 public class Principal {
 	
@@ -65,6 +68,8 @@ public class Principal {
 		}
 		System.out.println("--------------------");
 		*/
+		/*
+		//testar POO:
 		Carro carroJao = new Carro("Azul","BYD","PLUS"); //instanciei a classe no objeto		
 		Carro carroTiao = new Carro("Prata","BYD","PLUS","Automático"); //instanciei a classe no objeto
 		
@@ -76,7 +81,44 @@ public class Principal {
 		
 		Carro carroMaria = new Carro("Branco", "TESLA","PLUS","AUTOMATICO","2.0");
 		System.out.println("Maria: " + carroMaria.toString());
+		*/
+		//testar herança:
+		Pessoa pessoa1 = new Pessoa("Nome", "email@a.com","00 00000-0000");
+		System.out.println("Pessoa1:\n -----\n" + pessoa1.toString());
 		
+		System.out.println("--------------------");
+		
+		Aluno aluno1 = new Aluno("123456", "28/03/2024","Nome do aluno", "00 00000-0000");
+		System.out.println("Aluno:\n" + aluno1.toString());
+		System.out.println("--------------------");
+		
+		Funcionario func1 = new Funcionario(2000.0, "Funcionario Ze", "11 11111-1111");
+		System.out.println(func1);
+		System.out.println("--------------------");
+		
+		//Tratamento de exceçoes:
+		try {
+			int divisao = 10/0;
+		} catch (ArithmeticException e) {
+			System.out.println("!!!Erro: " + e.getMessage());
+		}		
+		System.out.println("--------------------");
+		
+		try {
+			int[] numeros = {2,1,5};
+			int valor1 = 0;
+			for(int i = 0; i <= 3; i++) {
+				valor1 = numeros[i];
+				int valor2 = 10 / valor1;
+				System.out.println("Valor2 = " + valor2);
+			}
+		} catch (ArithmeticException e) {
+			System.out.println("Erro no cálculo: " + e.getMessage());
+		} catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Erro na busca de array: " + e.getMessage());
+		}
+		
+		System.out.println("--------------------");
 	}
 
 }
