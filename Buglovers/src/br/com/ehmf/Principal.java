@@ -1,13 +1,15 @@
 package br.com.ehmf;
 
+import br.com.ehmf.model.Carro;
+
 public class Principal {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Iniciando com o Java");
-		
+		System.out.println("Iniciando com o Java");		
 		System.out.println("--------------------");
 		
+		/*
 		boolean condicao = true;
 		if(!condicao) { 
 			System.out.println("Condição verdadeira!");
@@ -62,6 +64,18 @@ public class Principal {
 			z++;
 		}
 		System.out.println("--------------------");
+		*/
+		Carro carroJao = new Carro("Azul","BYD","PLUS"); //instanciei a classe no objeto		
+		Carro carroTiao = new Carro("Prata","BYD","PLUS","Automático"); //instanciei a classe no objeto
+		
+		System.out.println("Jao: " + carroJao.toString());
+		System.out.println("Tiao: " + carroTiao.toString());
+		
+		carroJao.setCor("Vermelho");
+		System.out.println("Jao: " + carroJao.toString());
+		
+		Carro carroMaria = new Carro("Branco", "TESLA","PLUS","AUTOMATICO","2.0");
+		System.out.println("Maria: " + carroMaria.toString());
 		
 	}
 
