@@ -1,7 +1,9 @@
 package br.com.ehmf;
 
+import br.com.ehmf.exception.LimiteCreditoExcedidoException;
 import br.com.ehmf.model.Aluno;
 import br.com.ehmf.model.Carro;
+import br.com.ehmf.model.ContaBancaria;
 import br.com.ehmf.model.Funcionario;
 import br.com.ehmf.model.Pessoa;
 
@@ -82,6 +84,7 @@ public class Principal {
 		Carro carroMaria = new Carro("Branco", "TESLA","PLUS","AUTOMATICO","2.0");
 		System.out.println("Maria: " + carroMaria.toString());
 		*/
+		/*
 		//testar herança:
 		Pessoa pessoa1 = new Pessoa("Nome", "email@a.com","00 00000-0000");
 		System.out.println("Pessoa1:\n -----\n" + pessoa1.toString());
@@ -119,6 +122,15 @@ public class Principal {
 		}
 		
 		System.out.println("--------------------");
+		*/
+		//Tratamento de exceçoes personalizadas:
+		ContaBancaria contaBancaria = new ContaBancaria();
+		try {
+			contaBancaria.fazerSaque(1500.0);
+		} catch (LimiteCreditoExcedidoException e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 
 }
