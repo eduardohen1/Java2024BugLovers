@@ -10,6 +10,7 @@ public class Aluno extends Pessoa {
 		super(nome, email, telefone);
 		this.matricula = matricula;
 		this.dtMatricula = dtMatricula;
+		
 	}
 	
 	public Aluno(String matricula, String dtMatricula,
