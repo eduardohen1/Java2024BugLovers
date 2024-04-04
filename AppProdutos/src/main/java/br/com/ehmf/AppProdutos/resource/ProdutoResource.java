@@ -24,10 +24,10 @@ public class ProdutoResource {
 		p.setNome("Produto1");
 		p.setPreco(1000.0);
 		
-		//if(p == null)
+		if(p == null)
 			return ResponseEntity.notFound().build();
 		
-		//return ResponseEntity.ok(p);
+		return ResponseEntity.ok(p);
 	}
 	
 	

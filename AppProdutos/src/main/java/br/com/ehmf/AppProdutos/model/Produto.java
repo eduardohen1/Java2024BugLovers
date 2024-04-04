@@ -1,10 +1,25 @@
 package br.com.ehmf.AppProdutos.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tbl_produto")
 public class Produto {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(nullable = false, unique = true) //criando campo index
 	private String codigoBarras;
+	@Column(nullable = false)
 	private String nome;
+	@Column(nullable = false)
 	private Double preco;
 	
 	public Produto() {}
